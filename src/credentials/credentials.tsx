@@ -1,4 +1,4 @@
-export const production = "https://prueba-red1a1.herokuapp.com/api";
+export const production = "https://red1a1-s.herokuapp.com/api";
 export const development = "http://localhost:8080/api";
 
 export const rentas = "61e99f0e0d3bd9163e4a4b42";
@@ -11,7 +11,7 @@ export const oficinasCat = "6213cb430d7c145fa7ae62b4";
 export const bodegasCat = "6213cb480d7c145fa7ae62b8";
 
 export const googleClientId =
-  "89650619107-jecf46e28s507h50vrtpfadtf44u2hmc.apps.googleusercontent.com";
+  "670476434432-m4i4b7hvrlds0lunt1k3tbes8983p6i2.apps.googleusercontent.com";
 
 export const stripePublicId =
-  "pk_test_51JaTznCGqe3RvXVDQxhEnjQ1bLyso24Cy7whGP7B39Y2a8qCZEsEHEtCi1zxSfx0XbWiAUfqW10HbeCiyg4phaTy00Qu5iDasP";
+  "pk_test_51KiKjVIv9cLHUK7kzEedjIpvsH4rI4dlZHW33ylxnkvVjbza1ktllqUFiaChSGLlk2MWC1oNkqPEk5AytsaRGjxM00hdcIjyHS";
