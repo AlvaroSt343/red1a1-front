@@ -14,4 +14,4 @@ export const googleClientId =
   "670476434432-m4i4b7hvrlds0lunt1k3tbes8983p6i2.apps.googleusercontent.com";
 
 export const stripePublicId =
-  "pk_test_51KiKjVIv9cLHUK7kzEedjIpvsH4rI4dlZHW33ylxnkvVjbza1ktllqUFiaChSGLlk2MWC1oNkqPEk5AytsaRGjxM00hdcIjyHS";
+  "pk_test_51JaTznCGqe3RvXVDQxhEnjQ1bLyso24Cy7whGP7B39Y2a8qCZEsEHEtCi1zxSfx0XbWiAUfqW10HbeCiyg4phaTy00Qu5iDasP";
