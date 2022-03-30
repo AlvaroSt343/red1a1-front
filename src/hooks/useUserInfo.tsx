@@ -8,6 +8,8 @@ import { Usuario, UsuariosDir } from "../interfaces/UserInterface";
 const devURL = "http://localhost:8080/api";
 const baseURL = "https://red1a1back.herokuapp.com/api";
 
+//as
+
 export const useUserInfo = (uid: string | undefined | null) => {
   const [user, setUser] = useState<Usuario>();
   const [loading, setLoading] = useState(true);
