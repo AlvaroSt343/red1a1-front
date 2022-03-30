@@ -145,7 +145,9 @@ const NotificacionItem: FC<Props> = (props) => {
                                 >
                                   {solicitud.titulo
                                     ? solicitud.titulo
-                                    : solicitud.inmueble.titulo}
+                                    : solicitud.inmueble
+                                      ? solicitud.inmueble.titulo
+                                      : ''}
                                 </span>
                               </td>
                             </tr>
