@@ -3,7 +3,7 @@ import { Categoria } from "../interfaces/InmueblesInterface";
 import { TipoPropiedad } from "../interfaces/PropertyType";
 
 const devURL = "http://localhost:8080/api";
-const baseURL = "https://red1a1back.herokuapp.com/api";
+const baseURL = "https://red1a1-back.herokuapp.com/api";
 
 export const useCategories = () => {
   const [cargando, setCargando] = useState(true);
