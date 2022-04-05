@@ -55,7 +55,7 @@ const PurpleHeader = () => {
         ) : null}
         <li className="nav-item">
           <div className={styles.filterIconContainer}>
-            <Buscador />
+            <Buscador  />
             <i
               onClick={mostrarFiltros}
               className={`${

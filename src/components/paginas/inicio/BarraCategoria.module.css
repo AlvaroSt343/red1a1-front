@@ -1,6 +1,6 @@
 .barraCategorias {
   position: absolute;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 61px;
   transition: 300ms;
@@ -8,7 +8,7 @@
 
 .barraCategoriasInactive {
   position: absolute;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 61px;
   padding: 13px 0;

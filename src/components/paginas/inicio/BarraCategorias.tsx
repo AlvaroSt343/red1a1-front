@@ -33,8 +33,8 @@ const BarraCategorias = (props: Props) => {
         {propertyTypes.map((propertyType) => (
           <span
             className={`${selectedPro === propertyType._id
-                ? styles.barraItemPropertyTypeSelected
-                : styles.barraItemPropertyType
+              ? styles.barraItemPropertyTypeSelected
+              : styles.barraItemPropertyType
               } mx-2 pointer`}
             onClick={() => seleccionarTipoPropiedad(propertyType._id)}
             key={propertyType._id}
@@ -45,8 +45,8 @@ const BarraCategorias = (props: Props) => {
         {categorias?.map((categoria) => (
           <span
             className={`${selectedCat === categoria._id
-                ? styles.barraItemCategorySelected
-                : styles.barraItemCategory
+              ? styles.barraItemCategorySelected
+              : styles.barraItemCategory
               } mx-2 pointer`}
             onClick={() => {
               seleccionarCategoria(categoria._id);
