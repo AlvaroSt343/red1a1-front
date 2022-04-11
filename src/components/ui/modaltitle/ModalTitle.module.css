@@ -17,3 +17,12 @@
   left: 50%;
   transform: translate(-50%, -35px);
 }
+
+.line2 {
+  width: 100px;
+  height: 4px;
+  background-color: #e65a1f;
+  position: relative;
+  left: 0%;
+  transform: translateY(-35px);
+}

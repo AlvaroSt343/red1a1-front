@@ -116,6 +116,7 @@ interface Usuario {
   correo: string;
   telefonoOficina: string;
   telefonoPersonal: string;
+  sitioweb: string;
   facebookpage: string;
   instagram: string;
   twitter: string;

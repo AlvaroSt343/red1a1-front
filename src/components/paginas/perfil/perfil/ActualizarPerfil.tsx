@@ -1,3 +1,4 @@
+import Modaltitle2 from "components/ui/modaltitle/Modaltitle2";
 import { ChangeEvent, FormEvent, useContext, useRef, useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import Geosuggest, { Suggest } from "react-geosuggest";
@@ -22,6 +23,7 @@ const ActualizarPerfilForm = () => {
     telefonoPersonal: auth.telefonoPersonal,
     nombreInmobiliaria: auth.nombreInmobiliaria,
     direccionFisica: auth.direccionFisica,
+    sitioweb: auth.sitioweb,
     facebookpage: auth.facebookpage,
     instagram: auth.instagram,
     twitter: auth.twitter,
@@ -37,6 +39,7 @@ const ActualizarPerfilForm = () => {
     telefonoPersonal,
     nombreInmobiliaria,
     direccionFisica,
+    sitioweb,
     facebookpage,
     instagram,
     twitter,
@@ -69,7 +72,7 @@ const ActualizarPerfilForm = () => {
       <br />
       <br />
       <div className="d-flex justify-content-start">
-        <Modaltitle titulo="Datos personales" />
+        <Modaltitle2 titulo="Datos personales" />
       </div>
 
       <Form onSubmit={onSubmit}>
@@ -133,7 +136,7 @@ const ActualizarPerfilForm = () => {
         <br />
         <br />
         <div className="d-flex justify-content-start">
-          <Modaltitle titulo="Datos de la inmobiliaria" />
+          <Modaltitle2 titulo="Datos de la inmobiliaria" />
         </div>
 
         <Form.Group className="mb-3">
@@ -188,10 +191,21 @@ const ActualizarPerfilForm = () => {
 
         <br />
         <br />
-        <div>Redes sociales</div>
-        <br />
+        <div className="d-flex justify-content-start">
+          <Modaltitle2 titulo="Redes Sociales" />
+        </div>
         <Form.Group className="mb-3">
-          <Form.Label>Facebook</Form.Label>
+          <Form.Label><b>Sitio web</b></Form.Label>
+          <br />
+          <Form.Control
+            type="text"
+            value={sitioweb}
+            name="sitioweb"
+            onChange={handleChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
+        <Form.Label><b>Facebook</b></Form.Label>
           <br />
           <Form.Text muted>
             Escriba su página de facebook sin https://www. Ejemplo:
@@ -205,7 +219,7 @@ const ActualizarPerfilForm = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Instagram</Form.Label>
+          <Form.Label><b>Instagram</b></Form.Label>
           <br />
           <Form.Text muted>
             Escriba su página de instagram sin https://www. Ejemplo:

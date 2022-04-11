@@ -26,6 +26,7 @@ export interface Usuario {
   nombreInmobiliaria: string;
   direccionFisica: string;
   coordenadas: Location;
+  sitioweb: string;
   facebookpage: string;
   instagram: string;
   twitter: string;
@@ -43,6 +44,7 @@ export interface ActualizarUsuario {
   telefonoPersonal: string | number | string[] | undefined;
   nombreInmobiliaria: string | number | string[] | undefined;
   direccionFisica: string | number | string[] | undefined;
+  sitioweb: string | number | string[] | undefined;
   facebookpage: string | number | string[] | undefined;
   instagram: string | number | string[] | undefined;
   twitter: string | number | string[] | undefined;

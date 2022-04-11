@@ -9,6 +9,7 @@ export interface Auth {
   telefonoPersonal: string | number | string[] | undefined;
   nombreInmobiliaria: string | number | string[] | undefined;
   direccionFisica: string | undefined;
+  sitioweb: string | number | string[] | undefined;
   facebookpage: string | number | string[] | undefined;
   instagram: string | number | string[] | undefined;
   twitter: string | number | string[] | undefined;
