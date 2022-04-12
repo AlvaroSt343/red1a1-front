@@ -36,6 +36,8 @@
   box-sizing: border-box;
   border-radius: 57.1295px;
   padding: 4px 17px;
+  
+  text-align: center;
 }
 
 .inmuebleTiempo {
@@ -62,7 +64,8 @@
   font-size: 18px;
   line-height: 35px;
   color: #5e5e5e;
-  white-space: pre-line;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .inmuebleSubcontent {
@@ -72,6 +75,8 @@
   font-size: 25px;
   line-height: 35px;
   color: #5e5e5e;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .acordionContent {

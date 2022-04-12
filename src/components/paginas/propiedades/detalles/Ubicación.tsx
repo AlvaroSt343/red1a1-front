@@ -182,14 +182,14 @@ const Ubicacion = ({ inmuebles }: Props) => {
             <div className="mb-4">
               <div className="row">
                 <div className="col-12 mb-4">
-                  <span className={`${styles.inmuebleTipo2} me-4`}>
+                  <div className={`${styles.inmuebleTipo2} me-4`}>
                     <img
                       src="/images/icons/deatails-icons/ubicacion.png"
                       alt="..."
                       width={25}
                     />
                     {inmuebles.inmueble.direccion}
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>

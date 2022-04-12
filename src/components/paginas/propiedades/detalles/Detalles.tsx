@@ -52,7 +52,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   Detalles del inmueble
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -82,7 +82,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -111,7 +111,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -140,7 +140,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -169,7 +169,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -198,7 +198,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -227,7 +227,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -256,7 +256,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -283,7 +283,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                 <div className="inmueble-contenido">
                   <table>
                     <tbody>
@@ -332,7 +332,7 @@ const Detalles = ({ inmuebles }: Props) => {
                 </div>
                 <Accordion.Body className={styles.acordionContent}>
                   <div className="row">
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -361,7 +361,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -390,7 +390,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -419,7 +419,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -448,7 +448,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -479,7 +479,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -508,7 +508,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -539,7 +539,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -568,7 +568,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4 col-12">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -726,7 +726,7 @@ const Detalles = ({ inmuebles }: Props) => {
                 </div>
                 <Accordion.Body className={styles.acordionContent}>
                   <div className="row">
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -734,7 +734,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/9.png"
+                                  src="/images/icons/deatails-icons/18.png"
                                   alt="..."
                                 />
                               </td>
@@ -755,7 +755,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -763,7 +763,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/10.png"
+                                  src="/images/icons/deatails-icons/19.png"
                                   alt="..."
                                 />
                               </td>
@@ -784,7 +784,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -792,7 +792,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/11.png"
+                                  src="/images/icons/deatails-icons/20.png"
                                   alt="..."
                                 />
                               </td>
@@ -813,7 +813,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -821,7 +821,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/12.png"
+                                  src="/images/icons/deatails-icons/21.png"
                                   alt="..."
                                 />
                               </td>
@@ -842,7 +842,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -850,7 +850,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/13.png"
+                                  src="/images/icons/deatails-icons/22.png"
                                   alt="..."
                                 />
                               </td>
@@ -871,7 +871,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -879,7 +879,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/14.png"
+                                  src="/images/icons/deatails-icons/23.png"
                                   alt="..."
                                 />
                               </td>
@@ -898,7 +898,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -906,7 +906,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/15.png"
+                                  src="/images/icons/deatails-icons/24.png"
                                   alt="..."
                                 />
                               </td>
@@ -929,7 +929,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -937,7 +937,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/16.png"
+                                  src="/images/icons/deatails-icons/25.png"
                                   alt="..."
                                 />
                               </td>
@@ -958,7 +958,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -966,7 +966,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/17.png"
+                                  src="/images/icons/deatails-icons/26.png"
                                   alt="..."
                                 />
                               </td>
@@ -987,7 +987,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -995,7 +995,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/17.png"
+                                  src="/images/icons/deatails-icons/27.png"
                                   alt="..."
                                 />
                               </td>
@@ -1016,7 +1016,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -1024,7 +1024,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/17.png"
+                                  src="/images/icons/deatails-icons/28.png"
                                   alt="..."
                                 />
                               </td>
@@ -1045,7 +1045,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -1053,7 +1053,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/17.png"
+                                  src="/images/icons/deatails-icons/29.png"
                                   alt="..."
                                 />
                               </td>
@@ -1074,7 +1074,7 @@ const Detalles = ({ inmuebles }: Props) => {
                         </table>
                       </div>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6">
                       <div className="inmueble-contenido">
                         <table>
                           <tbody>
@@ -1082,7 +1082,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/17.png"
+                                  src="/images/icons/deatails-icons/30.png"
                                   alt="..."
                                 />
                               </td>
@@ -1111,7 +1111,7 @@ const Detalles = ({ inmuebles }: Props) => {
                               <td valign="top">
                                 <img
                                   className="me-3"
-                                  src="/images/icons/deatails-icons/17.png"
+                                  src="/images/icons/deatails-icons/31.png"
                                   alt="..."
                                 />
                               </td>
