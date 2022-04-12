@@ -176,7 +176,7 @@ const wallet = () => {
                   </tr>
                 </table>
                 {/* 
-              <h2 className="text-center py-5">
+              <h2 className="text-center py-5 text-secondary">
                 Aún no hay referencias
               </h2> */}
               </div>

@@ -107,7 +107,7 @@ const MenuUsuario = (props: Props) => {
               </div>
             </Link>
             {auth.role === "Administrador" ? (
-              <Link href="/dashboard/pagos/referencias">
+              <Link href="/dashboard">
                 <div
                   className={`${styles.menuItem} pointer mx-3 my-2`}
                   onClick={() => {

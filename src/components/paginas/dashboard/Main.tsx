@@ -17,7 +17,7 @@ const Main: FC<Props> = ({ children, handleToggleSidebar, titulo }) => {
       <div className="row ">
         <div className="col text-end">
           <div className={styles.navbarCustom}>
-            <span className={`${styles.hoja}`}>{titulo}</span>
+            <span className={`${styles.hoja} mt-2`}>{titulo}</span>
             <Link href="/">
               <span className={`${styles.navLinks} mx-3 pointer`}>Inicio</span>
             </Link>

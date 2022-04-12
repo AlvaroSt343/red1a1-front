@@ -33,7 +33,7 @@ const Sidebar = ({ handleToggleSidebar, toggled, collapsed }: Props) => {
       breakPoint="md"
     >
       <Menu iconShape="square" className={`${styles.altura} mx-2`}>
-        <SidebarHeader>
+        <SidebarHeader className="text-center mb-2">
           <br />
           <img
             className="pointer"
@@ -47,19 +47,11 @@ const Sidebar = ({ handleToggleSidebar, toggled, collapsed }: Props) => {
         <SidebarContent className="py-4">
           <MenuItem>
             <i className="bi bi-grid-3x3 me-2" />
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/dashboard">Resumen</Link>
           </MenuItem>
-          <SubMenu title="Pagos" icon={<Bank />}>
-            <MenuItem icon={<Wallet />}>
-              <Link href="/dashboard/pagos/wallet">Wallet</Link>
-            </MenuItem>
-
-            <MenuItem icon={<Referencia />}>
-              <Link href="/dashboard/pagos/referencias">Referencias</Link>
-            </MenuItem>
-          </SubMenu>
-          {/* <MenuItem>
-            <i className="bi bi-people-fill me-2"></i> Usuarios
+          <MenuItem>
+            <i className="bi bi-people-fill me-2"></i>
+            <Link href="/dashboard/Usuarios">Usuarios</Link>
           </MenuItem>
           <MenuItem>
             <i className="bi bi-house-fill me-2"></i> Inmuebles
@@ -70,7 +62,15 @@ const Sidebar = ({ handleToggleSidebar, toggled, collapsed }: Props) => {
           </MenuItem>
           <MenuItem>
             <i className="bi bi-building me-2"></i> Tipo de propiedad
-          </MenuItem> */}
+          </MenuItem>
+          <MenuItem>
+            <i className="bi bi-wallet2 me-2"></i>
+            <Link href="/dashboard/pagos/wallet">Wallet</Link>
+          </MenuItem>
+          <MenuItem>
+            <i className="bi bi-receipt-cutoff me-2"></i>
+            <Link href="/dashboard/pagos/referencias">Referencias</Link>
+          </MenuItem>
         </SidebarContent>
 
         <div className={styles.position}>
