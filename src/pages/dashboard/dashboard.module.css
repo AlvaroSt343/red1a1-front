@@ -1,6 +1,20 @@
-.filtros{
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid rgb(216, 216, 216);
-    background-color: white;
+.filtros {
+   background-color: white;
+   border-radius: 10px;
+   border: 1px solid rgba(201, 201, 201, 0.308);
+   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.08);
+   -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.08);
+   -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.08);
+   padding: 15px;
+}
+
+.Dpicker{
+   width: 100%;
+}
+
+.backprofile{
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   background-color:blueviolet;
 }
