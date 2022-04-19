@@ -16,27 +16,187 @@ const Usuarios = () => {
         <>
             <SEO titulo="Usuarios" url={router.asPath} />
             <DashboardLayout titulo="Usuarios">
-                <section className="my-5">
+                <section className="mt-5">
                     <div className="container">
                         <div className={`${styles.filtros}`}>
-                            <div className="row">
+                            <div className={`${styles.headR}`}>
+                                Detalles del Usuario
+                            </div>
+                            <div className="row p-2">
                                 <div className="col-2">
-                                    <div className="row">
-                                        <div className="col-2 text-center">
-                                            <div className={styles.backprofile}>
-                                                <img src="" alt="..." />
-                                            </div>
-                                        </div>
+                                    <div className={styles.backprofile}>
+                                        <img className={`${styles.imgProfile}`} src="/images/avatares/2.svg" alt="..." />
                                     </div>
                                 </div>
                                 <div className="col-10">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod rerum maiores voluptates incidunt tenetur ipsa delectus placeat cupiditate sunt ullam consectetur in aliquid, autem velit sint ratione, facere est dicta, et hic? Id obcaecati ut voluptatum voluptas, corporis cumque quos aliquam officiis. Unde et dolore repellendus quasi nobis earum?
+                                    <div className="row">
+                                        <div className="col-4">
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    id:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    620fd8479d32c9541a3bb214
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    nombre:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    Alvaro Salvador
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Correo:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    alsato.650cc@gmail.com
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    telefono oficina:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    6686151651651651
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    telefono personal:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    6686151651651651
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Rol:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    Administrador
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-4">
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Ubicación:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    Cancún, Q.ROO, MX
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Plan contratado:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    Avanzado
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Perfil empresarial:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Reiciendis, nostrum? Est consectetur.
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Inmobiliaria:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    Real State 8
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Dueño de:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    6 usuarios
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-4">
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Sitio web:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    www.real-state8.com
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Facebook:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    facebook.com/alvaro.343
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Twitter:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    twitter.com/alvaro.343
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Instagram:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    instagram.com/alvaro.343
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    LinkedIn:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    linkedin.com/alvaro.343
+                                                </div>
+                                            </div>
+                                            <div className="content mb-2">
+                                                <div className={`${styles.etiqueta}`}>
+                                                    Publicaciones:
+                                                </div>
+                                                <div className={`${styles.dato}`}>
+                                                    8
+                                                </div>
+                                                <button className={`${styles.btnProps}`}>
+                                                    Ver propiedades <i className="bi bi-caret-down-fill"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                <section className="mt-2 mb-5">
+                    <div className="container">
+                        <div className={`${styles.filtros}`}>
+                            <div className="row">
+                                <div className="col-6 ">
+                                    prop 1
+                                </div>
+                                <div className="col-6 ">
+                                    prop 2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <section>
                     <div className="container">
@@ -160,105 +320,7 @@ const Usuarios = () => {
                                                 </button>
                                             </td>
                                         </tr>
-                                        <tr className={styleRef.rowT}>
-                                            {/* <td className={styleRef.contentT}>
-                                                as65d6asd56asd1a65d
-                                            </td> */}
-                                            <td className={styleRef.contentT}>
-                                                25/22/55
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Alvaro Salvador Torruco
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                alvarosalvador.t@gmail.com
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                9984751570
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Avanzado
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                25
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Cancun, Q.Roo, MX
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                <button
-                                                    className={`${styleRef.btnT1} px-2 mx-1`}
-                                                >
-                                                    <i className="bi bi-eye" />
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr className={styleRef.rowT}>
-                                            {/* <td className={styleRef.contentT}>
-                                                as65d6asd56asd1a65d
-                                            </td> */}
-                                            <td className={styleRef.contentT}>
-                                                25/22/55
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Alvaro Salvador Torruco
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                alvarosalvador.t@gmail.com
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                9984751570
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Avanzado
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                25
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Cancun, Q.Roo, MX
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                <button
-                                                    className={`${styleRef.btnT1} px-2 mx-1`}
-                                                >
-                                                    <i className="bi bi-eye" />
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr className={styleRef.rowT}>
-                                            {/* <td className={styleRef.contentT}>
-                                                as65d6asd56asd1a65d
-                                            </td> */}
-                                            <td className={styleRef.contentT}>
-                                                25/22/55
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Alvaro Salvador Torruco
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                alvarosalvador.t@gmail.com
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                9984751570
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Avanzado
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                25
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                Cancun, Q.Roo, MX
-                                            </td>
-                                            <td className={styleRef.contentT}>
-                                                <button
-                                                    className={`${styleRef.btnT1} px-2 mx-1`}
-                                                >
-                                                    <i className="bi bi-eye" />
-                                                </button>
-                                            </td>
-                                        </tr>
+
 
                                     </table>
                                     {/* {referencias.length === 0 ? (
