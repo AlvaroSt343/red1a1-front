@@ -7,12 +7,10 @@ import {
   MenuItem,
   SidebarHeader,
   SidebarContent,
-  SubMenu,
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import styles from "./Dashboard.module.css";
 import { AuthContext } from "context/auth/AuthContext";
-import { Bank, Wallet, CashCoin, Referencia } from "components/ui/icons";
 
 interface Props {
   handleToggleSidebar: (value: boolean) => void;
@@ -31,8 +29,9 @@ const Sidebar = ({ handleToggleSidebar, toggled, collapsed }: Props) => {
       collapsed={collapsed}
       onToggle={handleToggleSidebar}
       breakPoint="md"
+      className={styles.sidebarposition}
     >
-      <Menu iconShape="square" className={`${styles.altura} mx-2`}>
+      <Menu iconShape="square" className="mx-2">
         <SidebarHeader className="text-center mb-2">
           <br />
           <img
@@ -74,12 +73,12 @@ const Sidebar = ({ handleToggleSidebar, toggled, collapsed }: Props) => {
           </MenuItem>
         </SidebarContent>
 
-        <div className={styles.position}>
+        {/* <div className={styles.position}>
           <MenuItem onClick={logOut}>
             <i className="bi bi-person-x-fill me-2" />
             Cerrar sesión
           </MenuItem>
-        </div>
+        </div> */}
       </Menu>
     </ProSidebar>
   );
