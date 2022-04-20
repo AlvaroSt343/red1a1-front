@@ -27,8 +27,12 @@
    padding-right: 10px;
    padding-left: 10px;
    height: 100%;
+   overflow: hidden;
 }
 .headR {
+   background-color: #7149bc;
+}
+.headR2 {
    background-color: #7149bc;
 }
 .textHeadR {
@@ -46,7 +50,8 @@
    padding: 5px;
    position: relative;
    left: 50%;
-   transform: translateX(-50%);
+   top: 50%;
+   transform: translate(-50%, -50%);
 }
 .imgProfile {
    border-radius: 50%;
@@ -131,4 +136,24 @@
    position: relative;
    top: 50%;
    transform: translateY(-50%);
+}
+.Ttitle {
+   color: white;
+   font-family: "Open Sans";
+   font-weight: 500;
+   text-align: center;
+   padding: 5px 0;
+}
+
+.CTlabel {
+   font-family: "Open Sans";
+   font-weight: 600;
+   font-size: 15px;
+   color: #383838;
+}
+.CTuser {
+   font-family: "Open Sans";
+   font-weight: 600;
+   font-size: 20px;
+   color: #269604;
 }

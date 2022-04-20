@@ -346,17 +346,25 @@ const Usuarios = () => {
                             <div className="col-4">
                                 <div className={styles.totales}>
                                     <div className="row">
-                                        <div className="col-12">
-                                            <div className="Ttitle">
+                                        <div className={`col-12 mb-2 ${styles.headR2}`}>
+                                            <div className={`${styles.Ttitle}`}>
                                                 Filtros aplicados
                                             </div>
                                         </div>
-                                        <div className="col-6">
-                                            <div className="label">
+                                        <div className="col-6 text-center mb-2">
+                                            <div className={`${styles.CTlabel}`}>
                                                 Usuarios:
                                             </div>
-                                            <div className="CTuser">
+                                            <div className={`${styles.CTuser}`}>
                                                 16
+                                            </div>
+                                        </div>
+                                        <div className="col-6 text-center mb-2">
+                                            <div className={`${styles.CTlabel}`}>
+                                                Publicaciones:
+                                            </div>
+                                            <div className={`${styles.CTuser}`}>
+                                                160
                                             </div>
                                         </div>
                                     </div>
