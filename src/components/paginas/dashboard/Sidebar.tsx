@@ -56,13 +56,13 @@ const Sidebar = ({ handleToggleSidebar, toggled, collapsed }: Props) => {
             <i className="bi bi-house-fill me-2"></i>
             <Link href="/dashboard/inmuebles">Inmuebles</Link>
           </MenuItem>
-          <MenuItem>
+          {/* <MenuItem>
             <i className="bi bi-tags-fill me-2"></i>
             <Link href="/dashboard/categorias">Categorías</Link>
           </MenuItem>
           <MenuItem>
             <i className="bi bi-building me-2"></i> Tipo de propiedad
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem>
             <i className="bi bi-wallet2 me-2"></i>
             <Link href="/dashboard/pagos/wallet">Wallet</Link>

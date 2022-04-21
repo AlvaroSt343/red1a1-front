@@ -15,12 +15,12 @@ const inmuebles = () => {
     return (
         <>
             <SEO titulo="inmuebles" url={router.asPath} />
-            <DashboardLayout titulo="inmuebles">
-                <section className="my-5">
+            <DashboardLayout titulo="INMUEBLES">
+                {/* <section className="my-5">
                     <div className="container">
                         <div className={`${styles.filtros}`}>
                             <div className="row">
-                                {/* <div className="col-2">
+                                <div className="col-2">
                                     <div className="row">
                                         <div className="col-2 text-center">
                                             <div className={styles.backprofile}>
@@ -31,14 +31,14 @@ const inmuebles = () => {
                                 </div>
                                 <div className="col-10">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod rerum maiores voluptates incidunt tenetur ipsa delectus placeat cupiditate sunt ullam consectetur in aliquid, autem velit sint ratione, facere est dicta, et hic? Id obcaecati ut voluptatum voluptas, corporis cumque quos aliquam officiis. Unde et dolore repellendus quasi nobis earum?
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
 
-                <section>
+                <section className="my-5">
                     <div className="container">
                         <div className="row">
                             <div className="col-2 mb-3">
@@ -67,19 +67,28 @@ const inmuebles = () => {
                             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-2 mb-sm-2 mb-md-1 mb-2">
                                 <Form.Select aria-label="Default select example">
                                     <option>Tipo</option>
-                                    <option value="1">Individual</option>
-                                    <option value="2">Basico</option>
-                                    <option value="3">Intermedio</option>
-                                    <option value="3">Avanzado</option>
+                                    <option value="1">Venta</option>
+                                    <option value="2">Renta</option>
                                 </Form.Select>
                             </div>
                             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-2 mb-sm-2 mb-md-1 mb-2">
                                 <Form.Select aria-label="Default select example">
                                     <option>Categoria</option>
-                                    <option value="1">Individual</option>
-                                    <option value="2">Basico</option>
-                                    <option value="3">Intermedio</option>
-                                    <option value="3">Avanzado</option>
+                                    <option value="1">Casas</option>
+                                    <option value="2">Departamentos</option>
+                                    <option value="3">Bodegas</option>
+                                    <option value="4">Terrenos</option>
+                                    <option value="5">Edificios</option>
+                                    <option value="6">Locales</option>
+                                    <option value="7">Oficinas</option>
+                                    <option value="8">Desarrollos</option>
+                                </Form.Select>
+                            </div>
+                            <div className="col-sm-12 col-md-4 col-lg-4 col-xl-2 mb-sm-2 mb-md-1 mb-2">
+                                <Form.Select aria-label="Default select example">
+                                    <option>Estatus</option>
+                                    <option value="1">Activo</option>
+                                    <option value="2">Pausado</option>
                                 </Form.Select>
                             </div>
                         </div>
@@ -87,7 +96,7 @@ const inmuebles = () => {
                             <div className="col-12 my-2">
                                 <div className={`${styleRef.tablaRef} table-responsive`}>
                                     <div className={styleRef.headerRef}>
-                                        Usuarios registrados
+                                        Inmuebles publicados : 728
                                     </div>
                                     <table className="w-100">
                                         <tr className={styleRef.rowT}>

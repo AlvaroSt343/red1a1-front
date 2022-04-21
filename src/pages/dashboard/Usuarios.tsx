@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import DashboardLayout from "components/layout/Dashboard";
 import SEO from "components/seo/SEO";
 import { AdminRoute } from "hooks/useAdminRoute";
-import { Form } from "react-bootstrap";
+import { FloatingLabel, Form } from "react-bootstrap";
 import styleRef from "components/paginas/dashboard/Referencias.module.css";
 import styles from './dashboard.module.css'
 
@@ -14,7 +14,7 @@ const Usuarios = () => {
     return (
         <>
             <SEO titulo="Usuarios" url={router.asPath} />
-            <DashboardLayout titulo="Usuarios">
+            <DashboardLayout titulo="USUARIOS">
                 <section className="mt-5">
                     <div className="container">
                         <div className={`${styles.filtros}`}>
@@ -307,19 +307,19 @@ const Usuarios = () => {
                 <section>
                     <div className="container">
                         <div className="row">
-                            <div className="col-8">
+                            <div className="col-sm-12 col-md-7 col-lg-7 col-xl-8">
                                 <div className="row">
-                                    <div className="col-3 mb-3">
+                                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6 mb-3">
                                         <label><b>Desde:</b></label> <br />
                                         <input type="date" className="Dpicker" />
                                     </div>
-                                    <div className="col-3 mb-3">
+                                    <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-6 mb-3">
                                         <label><b>Hasta:</b></label> <br />
                                         <input type="date" className="Dpicker" />
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-sm-12 col-md-4 col-lg-3 col-xl-4 mb-sm-2 mb-md-1 mb-2">
+                                    <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-sm-2 mb-md-1 mb-2">
                                         <Form.Control type="text" placeholder="Buscar . . . " />
                                     </div>
                                     <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-sm-2 mb-md-1 mb-2">
@@ -332,7 +332,7 @@ const Usuarios = () => {
                                             <option value="5">etc...</option>
                                         </Form.Select>
                                     </div>
-                                    <div className="col-sm-12 col-md-4 col-lg-3 col-xl-4 mb-sm-2 mb-md-1 mb-2">
+                                    <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-sm-2 mb-md-1 mb-2">
                                         <Form.Select aria-label="Default select example">
                                             <option>Paquete adquirido</option>
                                             <option value="1">Individual</option>
@@ -343,7 +343,7 @@ const Usuarios = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-4">
+                            <div className="col-sm-12 col-md-5 col-lg-5 col-xl-4">
                                 <div className={styles.totales}>
                                     <div className="row">
                                         <div className={`col-12 mb-2 ${styles.headR2}`}>
