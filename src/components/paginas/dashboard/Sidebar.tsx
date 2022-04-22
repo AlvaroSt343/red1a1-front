@@ -54,7 +54,7 @@ const Sidebar = ({ handleToggleSidebar, toggled, collapsed }: Props) => {
           </MenuItem>
           <MenuItem>
             <i className="bi bi-house-fill me-2"></i>
-            <Link href="/dashboard/inmuebles">Inmuebles</Link>
+            <Link href="/dashboard/Inmuebles">Inmuebles</Link>
           </MenuItem>
           {/* <MenuItem>
             <i className="bi bi-tags-fill me-2"></i>
