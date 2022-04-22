@@ -53,6 +53,9 @@ const FormStepOne = (props: Props) => {
           type="text"
           value={titulo}
           name="titulo"
+          minLength={15}
+          maxLength={75}
+          required
           onChange={handleChange}
         />
         <Row>

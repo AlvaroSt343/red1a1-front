@@ -46,6 +46,8 @@ const StepOne = (props: Props) => {
           type="text"
           value={inmuebleState.titulo}
           name="titulo"
+          maxLength={75}
+          required
           onChange={handleChange}
           autoComplete="off"
         />
