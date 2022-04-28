@@ -3,6 +3,7 @@ import { Overlay } from "react-bootstrap";
 import { Solicitud } from "interfaces/SolicitudInteface";
 import Loading from "../loading/Loading";
 import styles from "./Header.module.css";
+import Link from "next/link";
 
 interface Props {
   target: MutableRefObject<null>;
@@ -114,7 +115,7 @@ const NotificacionItem: FC<Props> = (props) => {
                                         : solicitud.usuario.apellido}
                                       {". "}
                                     </b>
-                                    Ahora pueda compartir{" "}
+                                    Ahora puedes compartir{" "}
                                   </span>
                                 ) : solicitud.estado === "Rechazado" ? (
                                   <span>
@@ -133,7 +134,16 @@ const NotificacionItem: FC<Props> = (props) => {
                                 ) : (
                                   "Error. Jamás debe de llegar a esta punto"
                                 )}
-                                <span
+                                <span className={`${styles.propNotifi} pointer`}>
+                                  <Link
+                                    href={`https://red1a1.com/app/propiedades/${solicitud.slug ? solicitud.slug : solicitud.inmueble.slug}`}>
+                                    
+                                      {solicitud.titulo ? solicitud.titulo : solicitud.inmueble ? solicitud.inmueble.titulo : ''}
+                                    
+                                  </Link>
+                                </span>
+
+                                {/* <span
                                   className={`${styles.propH} pointer`}
                                   onClick={() =>
                                     goToProperty(
@@ -148,7 +158,7 @@ const NotificacionItem: FC<Props> = (props) => {
                                     : solicitud.inmueble
                                       ? solicitud.inmueble.titulo
                                       : ''}
-                                </span>
+                                </span> */}
                               </td>
                             </tr>
                           </table>

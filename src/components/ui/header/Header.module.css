@@ -143,6 +143,17 @@
   transition: 150ms;
 }
 
+.propNotifi a {
+  color: #7149bc;
+  font-weight: 650;
+  text-decoration: none;
+  transition: 150ms;
+}
+.propNotifi a:hover {
+  color: #e65a1f;
+  transition: 150ms;
+}
+
 .btnApprove {
   border: 1px solid #7149bc;
   outline: none;

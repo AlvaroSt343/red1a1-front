@@ -38,7 +38,9 @@ const Notificaciones = (props: Props) => {
     setSolicitudes,
   } = props;
   const { auth } = useContext(AuthContext);
+  
   const router = useRouter();
+  
   const goToProperty = (slug: string) => router.push(`propiedades/${slug}`);
 
   const mostrarNotificaciones = () => {
