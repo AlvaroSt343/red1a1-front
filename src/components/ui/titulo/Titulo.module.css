@@ -16,3 +16,11 @@
   height: 4px;
   background-color: #e65a1f;
 }
+
+@media (max-width:571px) {
+  .title{
+    font-size: 31px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}

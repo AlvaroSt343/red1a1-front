@@ -82,14 +82,14 @@ const ListaReferencias = () => {
               <div className="table-responsive-xxl">
                 <table className={`${styles.customTable} table`}>
                   <tbody>
-                    <th className="">Referencia o concepto de pago</th>
+                    <th className="">Referencia</th>
                     <th className="">CLABE</th>
                     <th className="">Beneficiario</th>
                     <th className="">Paquete</th>
-                    <th className="">PPU</th>
+                    <th className="text-center">PPU</th>
                     <th className="text-center">Usuarios</th>
-                    <th className="">Total a depositar</th>
-                    <th className="">Comprobante</th>
+                    <th className="text-center">Total</th>
+                    <th className="text-center">Comprobante</th>
                     <th className="">Estado</th>
 
                     {referencias?.map((referencia) => (
@@ -99,13 +99,13 @@ const ListaReferencias = () => {
                         </td>
 
                         <td className={`${styles.content}`}>
-                          123456 456789 456123
+                          12345645678456123
                         </td>
                         <td className={`${styles.content}`}>Red 1a1</td>
                         <td className={`${styles.content}`}>
                           {referencia.paquete.nombre}
                         </td>
-                        <td className={`${styles.content}`}>
+                        <td className={`${styles.content} text-center`}>
                           {formatPrice(referencia.precio)}
                         </td>
                         <td className={`${styles.content} text-center`}>
@@ -113,18 +113,19 @@ const ListaReferencias = () => {
                             ? "N/A"
                             : referencia.totalUsuarios}
                         </td>
-                        <td className={`${styles.content}`}>
+                        <td className={`${styles.content} text-center`}>
                           {formatPrice(referencia.importe)}
                         </td>
-                        <td className={`${styles.content}`}>
+                        <td className={`${styles.content} text-center pt-1 pb-0`}>
                           {referencia.comprobante ? (
                             <div className="d-flex justify-content-center">
                               <a
+                                className={`${styles.btnVer}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href={referencia.comprobante}
                               >
-                                <i className="bi bi-image-fill px-2" />
+                                <i className="bi bi-image-fill mx-2" />
                               </a>
                               {referencia.estado ? null : (
                                 <>
@@ -132,16 +133,16 @@ const ListaReferencias = () => {
                                     onClick={() =>
                                       handleAdjuntar(referencia._id)
                                     }
-                                    className="bi bi-cloud-plus-fill pointer px-2"
+                                    className="bi bi-camera-fill pointer mx-2"
                                     style={{
                                       fontSize: 22,
                                       color: "#7149bc",
                                     }}
                                   />
                                   {seleccionado === referencia._id &&
-                                  comprobante !== "" ? (
-                                    <button
-                                      className="btn"
+                                    comprobante !== "" ? (
+                                    <i
+                                      className={`bi bi-cloud-arrow-up-fill pointer mx-2 ${styles.btnSubir}`}
                                       onClick={() =>
                                         subirComprobante(
                                           referencia.usuario._id,
@@ -149,8 +150,7 @@ const ListaReferencias = () => {
                                         )
                                       }
                                     >
-                                      Subir
-                                    </button>
+                                    </i>
                                   ) : null}
                                 </>
                               )}
@@ -158,9 +158,9 @@ const ListaReferencias = () => {
                           ) : (
                             <>
                               {seleccionado === referencia._id &&
-                              comprobante !== "" ? (
-                                <button
-                                  className="btn"
+                                comprobante !== "" ? (
+                                <span
+                                  className={`bi bi-cloud-arrow-up-fill ${styles.btnSubir}`}
                                   onClick={() =>
                                     subirComprobante(
                                       referencia.usuario._id,
@@ -168,8 +168,7 @@ const ListaReferencias = () => {
                                     )
                                   }
                                 >
-                                  Subir
-                                </button>
+                                </span>
                               ) : (
                                 <>
                                   {referencia.estado ? null : (
@@ -178,10 +177,10 @@ const ListaReferencias = () => {
                                         onClick={() =>
                                           handleAdjuntar(referencia._id)
                                         }
-                                        className="bi bi-cloud-plus-fill pointer"
+                                        className="bi bi-camera-fill pointer"
                                         style={{
                                           fontSize: 22,
-                                          color: "#7149bc",
+                                          color: "#269e1b",
                                         }}
                                       />
                                     </div>
