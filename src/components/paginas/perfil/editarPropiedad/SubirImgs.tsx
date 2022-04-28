@@ -108,9 +108,12 @@ const SubirImgs = () => {
     );
 
     const imgsResp = resp.files;
+    console.log(imgsResp);
+
 
     imgs.push(...imgsResp);
-    await actualizarInmueble({ ...inmuebleState, imgs }, idInmueble);
+    await actualizarInmueble({ imgs }, idInmueble);
+    // await actualizarInmueble({ ...inmuebleState, imgs }, idInmueble);
 
     setCargando(false);
 
@@ -126,7 +129,7 @@ const SubirImgs = () => {
             className="my-4 pointer"
             src="/images/content/agregafoto.png"
             alt="red1a1"
-            style={{ width: "70%" }}
+            style={{ width: "50%" }}
           />
         </div>
       </div>

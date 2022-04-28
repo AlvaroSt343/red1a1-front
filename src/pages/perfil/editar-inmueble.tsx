@@ -14,6 +14,22 @@ const EditarInmueble = () => {
   const { editar, idInmueble } = useContext(InmuebleContext);
   const router = useRouter();
   const { cargando } = useInmueble(idInmueble);
+  console.log(idInmueble);
+
+  // -*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*-
+  // -*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*-
+  // -*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*-
+  // YA NO SE USA, SE CAMBIO POR
+  // EDITAR-INFO Y EDITAR-FOTO
+  // CAUSABA PROBLEMAS AL EDITAR, Y DUPLICABA INFORMACION.
+  // NO SE ELIMINA ESTA PAGINA HASTA CERCIORARCE QUE NO SE UTILICE MAS ADELANTE
+  // -*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*-
+  // -*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*-
+  // -*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*--*-*-*-*--*-*-*-*--*-*-*-*-*-
+
+
+
+
 
   return (
     <>
@@ -23,13 +39,13 @@ const EditarInmueble = () => {
           editar === "Información" ? "Editar información" : "Editar imágenes"
         }
       />
-      <Container className="text-center">
+      {/* <Container className="text-center">
         {editar === "Información" ? (
-          <>{cargando ? <Loading /> : <EditarInformacion />}</>
+          <> {cargando ? <Loading /> : <EditarInformacion />}</>
         ) : (
           <>{cargando ? <Loading /> : <EditarImgs />}</>
         )}
-      </Container>
+      </Container> */}
     </>
   );
 };

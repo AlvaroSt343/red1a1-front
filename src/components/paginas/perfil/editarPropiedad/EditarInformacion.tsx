@@ -81,12 +81,12 @@ const EditarInformacion = () => {
 
   const handleNextStep = () => {
     setSteps(steps + 1);
-    router.push("/perfil/editar-inmueble");
+    router.push("/perfil/editar-info");
   };
 
   const handlePrevStep = () => {
     setSteps(steps - 1);
-    router.push("/perfil/editar-inmueble");
+    router.push("/perfil/editar-info");
   };
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -105,7 +105,8 @@ const EditarInformacion = () => {
     };
 
     const res = await actualizarInmueble(data, idInmueble);
-
+    console.log(res);
+    
     router.push("/perfil/mis-propiedades");
   };
 

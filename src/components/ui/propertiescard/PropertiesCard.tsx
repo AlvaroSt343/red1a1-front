@@ -38,13 +38,13 @@ const PropertiesCard = (props: Props) => {
   const editarInmuebleInfo = (id: string) => {
     setIdInmueble(id);
     setEditar("Información");
-    router.push("/perfil/editar-inmueble");
+    router.push("/perfil/editar-info");
   };
 
   const editarInmuebleImg = (id: string) => {
     setIdInmueble(id);
     setEditar("Imágenes");
-    router.push("/perfil/editar-inmueble");
+    router.push("/perfil/editar-fotos");
   };
 
   const compartir = () => toast.success(`Se ha copiado al portapapeles`);
