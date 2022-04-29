@@ -9,6 +9,7 @@ import { InmuebleContext } from "context/inmuebles/InmuebleContext";
 import Loading from "components/ui/loading/Loading";
 import { fetchAceptarRechazarSolicitud } from "helpers/fetch";
 import { production } from "credentials/credentials";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 const CompartidasCard = () => {
   const { auth } = useContext(AuthContext);
@@ -20,6 +21,9 @@ const CompartidasCard = () => {
     estado,
     totall
   );
+
+  const compartir = () => toast.success(`Se ha copiado al portapapeles`);
+
   const goToProperty = (slug: string) => router.push(`/propiedades/${slug}`);
 
   const aprobarSolicitud = async (
@@ -180,7 +184,7 @@ const CompartidasCard = () => {
                         />
                       </div>
                       <div className={styles.tituloContainer}>
-                        <div className={`${styles.proContent} my-2`}>
+                        <div className={`${styles.proContent} my-2 mx-1`}>
                           {compartida.inmueble.titulo}
                         </div>
                       </div>
@@ -188,23 +192,27 @@ const CompartidasCard = () => {
                         {auth.uid === compartida.propietario._id ? (
                           <>
                             {compartida.estado === "Aprobado" ? (
-                              <span>
-                                Has compartido este inmueble con{" "}
-                                <b>
-                                  {compartida.usuario.nombre}{" "}
-                                  {compartida.usuario.apellido}
-                                </b>
-                              </span>
+                              <div className={`${styles.bottomCard}`}>
+                                <span>
+                                  Has compartido este inmueble con{" "}
+                                  <b>
+                                    {compartida.usuario.nombre}{" "}
+                                    {compartida.usuario.apellido}
+                                  </b>
+                                </span>
+                              </div>
                             ) : compartida.estado === "Rechazado" ? (
-                              <span>
-                                Has rechazado la solicitud de{" "}
-                                <b>
-                                  {compartida.usuario.nombre}{" "}
-                                  {compartida.usuario.apellido}
-                                </b>
-                              </span>
+                              <div className={`${styles.bottomCard}`}>
+                                <span>
+                                  Has rechazado la solicitud de{" "}
+                                  <b>
+                                    {compartida.usuario.nombre}{" "}
+                                    {compartida.usuario.apellido}
+                                  </b>
+                                </span>
+                              </div>
                             ) : compartida.estado === "Pendiente" ? (
-                              <>
+                              <div className={`${styles.bottomCard}`}>
                                 <b>
                                   {compartida.usuario.nombre}{" "}
                                   {compartida.usuario.apellido}{" "}
@@ -246,41 +254,50 @@ const CompartidasCard = () => {
                                     ></i>
                                   </button>
                                 </div>
-                              </>
+                              </div>
                             ) : (
                               "Error. Nunca debe de llegar aquí"
                             )}
                           </>
                         ) : (
-                          <span>
-                            {compartida.estado === "Aprobado" ? (
-                              <>
-                                <b>
-                                  {compartida.propietario.nombre}{" "}
-                                  {compartida.propietario.apellido}
-                                </b>
-                                ha compartido esta propiedad contigo.{" "}
-                              </>
-                            ) : compartida.estado === "Rechazado" ? (
-                              <>
-                                <b>
-                                  {compartida.propietario.nombre}{" "}
-                                  {compartida.propietario.apellido}
-                                </b>
-                                ha rechazado tu solicitud.{" "}
-                              </>
-                            ) : compartida.estado === "Pendiente" ? (
-                              <>
-                                <b>
-                                  {compartida.propietario.nombre}{" "}
-                                  {compartida.propietario.apellido}
-                                </b>
-                                tiene pendiente tu solicitud{" "}
-                              </>
-                            ) : (
-                              "Error. Nunca debe llegar aquí"
-                            )}
-                          </span>
+                          <div className={`${styles.bottomCard}`}>
+                            <span>
+                              {compartida.estado === "Aprobado" ? (
+                                <>
+                                  <b>
+                                    {compartida.propietario.nombre}{" "}
+                                    {compartida.propietario.apellido}
+                                  </b>
+                                  {" "}ha compartido esta propiedad contigo.{" "}
+
+                                  <CopyToClipboard
+                                    onCopy={compartir}
+                                    text={`red1a1.com/app/propiedades/${compartida.inmueble.slug}`}
+                                  >
+                                    <button className={`${styles.btnShare}`} />
+                                  </CopyToClipboard>
+                                </>
+                              ) : compartida.estado === "Rechazado" ? (
+                                <>
+                                  <b>
+                                    {compartida.propietario.nombre}{" "}
+                                    {compartida.propietario.apellido}
+                                  </b>
+                                  {" "}ha rechazado tu solicitud.{" "}
+                                </>
+                              ) : compartida.estado === "Pendiente" ? (
+                                <>
+                                  <b>
+                                    {compartida.propietario.nombre}{" "}
+                                    {compartida.propietario.apellido}
+                                  </b>
+                                  {" "}tiene pendiente tu solicitud{" "}
+                                </>
+                              ) : (
+                                "Error. Nunca debe llegar aquí"
+                              )}
+                            </span>
+                          </div>
                         )}
                       </div>
                     </div>
