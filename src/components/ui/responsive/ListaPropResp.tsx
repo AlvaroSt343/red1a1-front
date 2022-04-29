@@ -5,6 +5,7 @@ import { MapContext } from "context/map/MapContext";
 import { InmueblesUsuario } from "interfaces/CrearInmuebleInterface";
 import { formatPrice } from "helpers";
 import CopyToClipboard from "react-copy-to-clipboard";
+import { agregarFav, agregarHist } from "../../../helpers/fetch";
 import styles from "./ResposiveStyles.module.css";
 import { useListaInmuebleCoords } from "hooks/useInmuebles";
 import Loading from "../loading/Loading";
@@ -13,7 +14,7 @@ interface Props {
   inmueble: InmueblesUsuario;
   compartir: () => ReactText;
   agregarFavorito: (inmuebleId: string, propietario: any) => Promise<void>;
-  handleProperty: (id: string, slug: string) => Promise<void>;
+
 }
 
 const ListaPropResp = () => {
@@ -40,6 +41,15 @@ const ListaPropResp = () => {
     categoria,
     tipoPropiedad
   );
+
+  const handleProperty = async (id: string, slug: string) => {
+    const data = { usuario: auth.uid, inmueble: id };
+
+    router.push(`/propiedades/${slug}`);
+
+    await agregarHist("historial", data);
+  };
+
 
   const mostrarListaF = () => setMostrarLista(!mostrarLista);
 
@@ -114,7 +124,7 @@ const ListaPropResp = () => {
                         </div>
 
                         <div
-                          className="row" /* onClick={() => handleProperty(inmueble._id, inmueble.slug)}*/
+                          className="row" onClick={()=>handleProperty(inmueble._id, inmueble.slug)}
                         >
                           <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-12 p-0">
                             <div className={styles.imgcontainer}>
