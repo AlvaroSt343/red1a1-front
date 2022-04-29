@@ -272,7 +272,7 @@ const CompartidasCard = () => {
 
                                   <CopyToClipboard
                                     onCopy={compartir}
-                                    text={`red1a1.com/app/propiedades/${compartida.inmueble.slug}`}
+                                    text={`https://red1a1.com/app/propiedades/${compartida.inmueble.slug}`}
                                   >
                                     <button className={`${styles.btnShare}`} />
                                   </CopyToClipboard>

@@ -107,7 +107,7 @@ const PropertiesCard = (props: Props) => {
           {isActive ? (
             <CopyToClipboard
               onCopy={compartir}
-              text={`red1a1.com/app/propiedades/${slug}`}
+              text={`https://red1a1.com/app/propiedades/${slug}`}
             >
               <button type="button" className={`${styles.customBtn2} btn`} />
             </CopyToClipboard>

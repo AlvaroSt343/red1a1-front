@@ -84,7 +84,7 @@ const FavPropertiesCard = (props: Props) => {
           />
           <CopyToClipboard
             onCopy={compartir}
-            text={`red1a1.com/app/propiedades/${slug}`}
+            text={`https://red1a1.com/app/propiedades/${slug}`}
           >
             <button type="button" className={`${styles.customBtn3} btn`} />
           </CopyToClipboard>

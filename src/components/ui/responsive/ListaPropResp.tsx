@@ -95,7 +95,7 @@ const ListaPropResp = () => {
                         <div className={styles.topIcons1}>
                           <CopyToClipboard
                             // onCopy={compartir}
-                            text={`red1a1.com/app/propiedades/${inmueble.slug}`}
+                            text={`https://red1a1.com/app/propiedades/${inmueble.slug}`}
                           >
                             <button
                               type="button"
