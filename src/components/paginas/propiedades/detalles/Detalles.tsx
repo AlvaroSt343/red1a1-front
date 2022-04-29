@@ -22,20 +22,24 @@ const Detalles = ({ inmuebles }: Props) => {
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-12 col-xl-9">
             <div className="row d-flex justify-content-between">
-              <div className="col-12">
+              <div className="col-12 text-sm-start text-md-start text-lg-center text-center">
                 <div className={`${styles.inmuebleTitle} mb-3`}>
                   {inmuebles.inmueble.titulo}
                 </div>
               </div>
-              <div className="col-sm-12 col-md-5 col-lg-5 text-start">
+              <div className="col-sm-12 col-md-5 col-lg-5 text-sm-start text-md-start text-lg-center text-center">
                 <div className={styles.inmueblePrecio}>
                   {formatPrice(inmuebles.inmueble.precio)}
                 </div>
               </div>
-              <div className="col-sm-12 col-md-2 col-lg-2 text-sm-start text-md-start text-lg-center text-start">
+              <div className="col-sm-12 col-md-2 col-lg-2 text-sm-start text-md-start text-lg-center text-center">
                 <div className="mt-3">
-                  <span className={styles.inmuebleTipo}>
+                  <span className={`${styles.inmuebleTipo} m-1`}>
                     {inmuebles.inmueble.categoria.nombre}
+                  </span>
+                  {/* <div className={styles.divisor}></div> */}
+                  <span className={`${styles.inmuebleTipo2} m-1`}>
+                    {inmuebles.inmueble.tipoPropiedad.nombre}
                   </span>
                 </div>
               </div>

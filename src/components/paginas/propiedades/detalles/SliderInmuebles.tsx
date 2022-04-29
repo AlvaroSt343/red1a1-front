@@ -23,7 +23,7 @@ const SliderInmuebles = ({ inmuebles }: Props) => {
           Aun no hay imágenes <br /> para mostrar {":("}
         </div>
       ) : null}
-      {inmuebles.inmueble.imgs.length === 1 ? (
+      {/* {inmuebles.inmueble.imgs.length === 1 ? (
         <div className="text-center">
           <div className={styles.contenedorimg}>
             <img
@@ -33,54 +33,54 @@ const SliderInmuebles = ({ inmuebles }: Props) => {
             />
           </div>
         </div>
-      ) : (
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          className="mySwiper"
-        >
-          {inmuebles.inmueble.imgs.length === 0 ? (
-            "No hay imágenes para mostrar"
-          ) : (
-            <>
-              {inmuebles.inmueble.imgs.map((image) => {
-                const sepracion = image.split(".");
-                const extension = sepracion[sepracion.length - 1];
-                const extensionesValidas = ["mp4"];
-                return (
-                  <SwiperSlide key={image}>
-                    {extensionesValidas.includes(extension) ? (
-                      <div className={styles.boxVideo}>
-                        <video
-                          className={styles.video}
+      ) : ( */}
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        className="mySwiper"
+      >
+        {inmuebles.inmueble.imgs.length === 0 ? (
+          "No hay imágenes para mostrar"
+        ) : (
+          <>
+            {inmuebles.inmueble.imgs.map((image) => {
+              const sepracion = image.split(".");
+              const extension = sepracion[sepracion.length - 1];
+              const extensionesValidas = ["mp4"];
+              return (
+                <SwiperSlide key={image}>
+                  {extensionesValidas.includes(extension) ? (
+                    <div className={styles.boxVideo}>
+                      <video
+                        className={styles.video}
+                        src={image}
+                        controls
+                        controlsList="nodownload"
+                      />
+                    </div>
+                  ) : (
+                    <div className="text-center">
+                      <div className={styles.contenedorimg}>
+                        <img
+                          className={styles.imagenes}
                           src={image}
-                          controls
-                          controlsList="nodownload"
+                          alt={inmuebles.inmueble.titulo}
                         />
                       </div>
-                    ) : (
-                      <div className="text-center">
-                        <div className={styles.contenedorimg}>
-                          <img
-                            className={styles.imagenes}
-                            src={image}
-                            alt={inmuebles.inmueble.titulo}
-                          />
-                        </div>
-                      </div>
-                    )}
-                  </SwiperSlide>
-                );
-              })}
-            </>
-          )}
-        </Swiper>
-      )}
+                    </div>
+                  )}
+                </SwiperSlide>
+              );
+            })}
+          </>
+        )}
+      </Swiper>
+      {/* )} */}
     </>
   );
 };
