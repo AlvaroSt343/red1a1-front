@@ -33,9 +33,8 @@ const Header = () => {
   const [contador, setContador] = useState(0);
   const { solicitudes, cargando, setSolicitudes } = useSolicitudes(auth.uid);
   const notificacionRef = useRef<HTMLDivElement>(null);
-  // const [nuevaNotificacion, setNuevaNotificacion] = useState<Notificacion[]>(
-  //   []
-  // );
+  // const [nuevaNotificacion, setNuevaNotificacion] =
+  //   useState<Notificacion[]>([]);
   // const uniqueValues = new Set();
 
   useEffect(() => {
@@ -59,12 +58,17 @@ const Header = () => {
   useEffect(() => {
     setContador(solicitudes.length);
   }, [solicitudes.length]);
+
+
+
   // useEffect(() => {
   //   socket?.on("obtener-notificacion", (notificacion) => {
   //     console.log(notificacion, "sa");
   //     setNuevaNotificacion((noti) => [...noti, notificacion]);
   //   });
   // }, []);
+
+
 
   return (
     <Navbar className={styles.navStyle} bg="light" expand="sm">

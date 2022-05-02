@@ -22,17 +22,17 @@ const Detalles = ({ inmuebles }: Props) => {
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-12 col-xl-9">
             <div className="row d-flex justify-content-between">
-              <div className="col-12 text-sm-start text-md-start text-lg-center text-center">
+              <div className="col-12 text-sm-center text-md-start text-lg-start text-center">
                 <div className={`${styles.inmuebleTitle} mb-3`}>
                   {inmuebles.inmueble.titulo}
                 </div>
               </div>
-              <div className="col-sm-12 col-md-5 col-lg-5 text-sm-start text-md-start text-lg-center text-center">
+              <div className="col-sm-12 col-md-5 col-lg-5 text-sm-center text-md-start text-lg-start text-center">
                 <div className={styles.inmueblePrecio}>
                   {formatPrice(inmuebles.inmueble.precio)}
                 </div>
               </div>
-              <div className="col-sm-12 col-md-2 col-lg-2 text-sm-start text-md-start text-lg-center text-center">
+              <div className="col-sm-12 col-md-3 col-lg-3 text-sm-center text-md-start text-lg-start text-center">
                 <div className="mt-3">
                   <span className={`${styles.inmuebleTipo} m-1`}>
                     {inmuebles.inmueble.categoria.nombre}
@@ -43,7 +43,7 @@ const Detalles = ({ inmuebles }: Props) => {
                   </span>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-4 col-lg-4 text-sm-start text-md-start text-lg-end text-start">
+              <div className="col-sm-12 col-md-4 col-lg-4 text-sm-center text-md-end text-lg-end text-center">
                 <div className={`${styles.inmuebleTiempo} mt-3`}>
                   Publicado {publicadoHace(inmuebles.inmueble.createdAt)}
                 </div>
