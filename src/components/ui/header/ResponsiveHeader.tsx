@@ -62,6 +62,11 @@ const ResponsiveHeader = () => {
             <br />
             <br />
             <div onClick={cerrarMenu}>
+              <Link href="/">
+                <span className={styles.headerLinkItem}>Inicio</span>
+              </Link>
+            </div>
+            <div onClick={cerrarMenu}>
               <Link href="/perfil/mis-propiedades">
                 <span className={styles.headerLinkItem}>Mis propiedades</span>
               </Link>

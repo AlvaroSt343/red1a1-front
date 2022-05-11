@@ -97,6 +97,12 @@ const Header = () => {
             </Nav>
           ) : (
             <Nav className="ms-auto my-2" navbarScroll>
+              <Link href='/'>
+                <div className={`${styles.navEnlace} pointer`} style={{marginTop: '20px'}}>
+                  Inicio
+                </div>
+              </Link>
+
               <div className="my-1">
                 <Button titulo="chats" onClick={handleShowCanvas} />
               </div>
