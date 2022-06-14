@@ -5,9 +5,9 @@ import { InmueblesUsuario } from '../interfaces/CrearInmuebleInterface';
 import { HistorialUsuario, PedidosUsuario } from '../interfaces/Historial';
 import { Usuario, UsuariosDir } from '../interfaces/UserInterface';
 
-const devURL = 'http://localhost:8080/api';
-const baseURL = devURL;
-// const baseURL = "https://red1a1-back.herokuapp.com/api";
+//const devURL = 'http://localhost:8080/api';
+//const baseURL = devURL;
+const baseURL = "https://red1a1-back.herokuapp.com/api";
 
 export const useUserInfo = (uid: string | undefined | null) => {
   const [user, setUser] = useState<Usuario>();
