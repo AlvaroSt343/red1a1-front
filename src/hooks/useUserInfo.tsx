@@ -1,12 +1,13 @@
-import { useContext, useEffect, useState } from "react";
-import { InmuebleContext } from "../context/inmuebles/InmuebleContext";
-import { production } from "../credentials/credentials";
-import { InmueblesUsuario } from "../interfaces/CrearInmuebleInterface";
-import { HistorialUsuario, PedidosUsuario } from "../interfaces/Historial";
-import { Usuario, UsuariosDir } from "../interfaces/UserInterface";
+import { useContext, useEffect, useState } from 'react';
+import { InmuebleContext } from '../context/inmuebles/InmuebleContext';
+import { production } from '../credentials/credentials';
+import { InmueblesUsuario } from '../interfaces/CrearInmuebleInterface';
+import { HistorialUsuario, PedidosUsuario } from '../interfaces/Historial';
+import { Usuario, UsuariosDir } from '../interfaces/UserInterface';
 
-const devURL = "http://localhost:8080/api";
-const baseURL = "https://red1a1-back.herokuapp.com/api";
+const devURL = 'http://localhost:8080/api';
+const baseURL = devURL;
+// const baseURL = "https://red1a1-back.herokuapp.com/api";
 
 export const useUserInfo = (uid: string | undefined | null) => {
   const [user, setUser] = useState<Usuario>();
@@ -15,7 +16,7 @@ export const useUserInfo = (uid: string | undefined | null) => {
   const getUserInfo = async () => {
     setLoading(true);
 
-    const data = await fetch(baseURL + "/usuarios/" + uid);
+    const data = await fetch(baseURL + '/usuarios/' + uid);
     const resp = await data.json();
 
     setLoading(false);
@@ -50,6 +51,32 @@ export const useUserInmuebles = (uid: string | undefined | null, desde = 0) => {
   }, [orden, desde, uid]);
 
   return { inmuebles, cargando, total, setInmuebles };
+};
+
+export const useUltimoInmueble = (
+  uid: string | undefined | null,
+  desde = 0
+) => {
+  const [ultimoInmueble, setUltimoInmueble] = useState<InmueblesUsuario[]>();
+  const [cargando, setCargando] = useState(true);
+  const [total, setTotal] = useState(0);
+  const { orden } = useContext(InmuebleContext);
+
+  const obtenerInmueblesDeUsuario = async () => {
+    const data = await fetch(
+      `${baseURL}/inmuebles/usuario/${uid}?limite=1&orden=-createdAt`
+    );
+    const resp = await data.json();
+    setUltimoInmueble(resp.inmueblesUsuario);
+    setCargando(false);
+    setTotal(resp.total);
+  };
+
+  useEffect(() => {
+    obtenerInmueblesDeUsuario();
+  }, [orden, desde, uid]);
+
+  return { ultimoInmueble, cargando, total, setUltimoInmueble };
 };
 
 export const useHistorial = (uid: string | undefined | null, desde: number) => {

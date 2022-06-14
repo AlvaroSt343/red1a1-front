@@ -4,43 +4,41 @@ import {
   useContext,
   useEffect,
   useState,
-} from "react";
-import { useRouter } from "next/router";
-import { Form } from "react-bootstrap";
-import { useDropzone } from "react-dropzone";
-import { AuthContext } from "../../../../context/auth/AuthContext";
-import { InmuebleContext } from "../../../../context/inmuebles/InmuebleContext";
-import {
-  useUserInmuebles,
-  useUsuariosPorDir,
-} from "../../../../hooks/useUserInfo";
-import Button from "../../../ui/button/Button";
-import styles from "./AgregaImg.module.css";
-import Loading from "../../../ui/loading/Loading";
-import { production } from "credentials/credentials";
+} from 'react';
+import { useRouter } from 'next/router';
+import { Form } from 'react-bootstrap';
+import { useDropzone } from 'react-dropzone';
+import { AuthContext } from '../../../../context/auth/AuthContext';
+import { InmuebleContext } from '../../../../context/inmuebles/InmuebleContext';
+import { useUsuariosPorDir } from '../../../../hooks/useUserInfo';
+import Button from '../../../ui/button/Button';
+import styles from './AgregaImg.module.css';
+import Loading from '../../../ui/loading/Loading';
+import { production } from 'credentials/credentials';
+import { useUltimoInmueble } from '../../../../hooks/useUserInfo';
 
 const thumb: CSSProperties = {
-  display: "inline-flex",
+  display: 'inline-flex',
   borderRadius: 2,
-  border: "1px solid #7149BC",
+  border: '1px solid #7149BC',
   marginBottom: 8,
   marginRight: 8,
   width: 100,
   height: 100,
   padding: 4,
-  boxSizing: "border-box",
+  boxSizing: 'border-box',
 };
 
 const thumbInner = {
-  display: "flex",
+  display: 'flex',
   minWidth: 0,
-  overflow: "hidden",
+  overflow: 'hidden',
 };
 
 const img = {
-  display: "block",
-  width: "auto",
-  height: "100%",
+  display: 'block',
+  width: 'auto',
+  height: '100%',
 };
 
 const AnadirImagenes = () => {
@@ -49,15 +47,15 @@ const AnadirImagenes = () => {
   const router = useRouter();
   const [cargando, setCargando] = useState(false);
   const [pictures, setPictures] = useState<any>([]);
-  const { inmuebles } = useUserInmuebles(auth.uid);
+  const { ultimoInmueble } = useUltimoInmueble(auth.uid);
   const [opciones, setOpciones] = useState(false);
   const [agregarVideo, setAgregarVideo] = useState(false);
-  const [direccionInm, setDireccionInm] = useState<string | undefined>("");
+  const [direccionInm, setDireccionInm] = useState<string | undefined>('');
 
   const { usuariosPorDir } = useUsuariosPorDir(direccionInm);
 
   const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
+    accept: 'image/*',
     maxFiles: 20,
     onDrop: (acceptedFiles: any) => {
       setPictures(
@@ -94,7 +92,7 @@ const AnadirImagenes = () => {
     </div>
   ));
 
-  const ultimoInmueble = inmuebles ? inmuebles[inmuebles!.length - 1] : null;
+  const ultimoInmuebles = ultimoInmueble ? ultimoInmueble[0] : null;
 
   const uploadPictures = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -102,31 +100,31 @@ const AnadirImagenes = () => {
     const formData = new FormData();
 
     for (let i = 0; i < pictures.length; i++) {
-      formData.append("pictures", pictures[i]);
+      formData.append('pictures', pictures[i]);
     }
 
     const res = await subirImagenesInmueble(
       formData,
       auth.uid,
-      ultimoInmueble?._id,
-      ""
+      ultimoInmuebles?._id,
+      ''
     );
 
     if (res.ok) {
-      setDireccionInm(ultimoInmueble?.direccion);
+      setDireccionInm(ultimoInmuebles?.direccion);
       usuariosPorDir?.forEach(async (usuario) => {
         const body = {
           nombre: usuario.nombre,
           apellido: usuario.apellido,
           correo: usuario.correo,
-          tituloInmueble: ultimoInmueble?.titulo,
-          slug: ultimoInmueble?.slug,
+          tituloInmueble: ultimoInmuebles?.titulo,
+          slug: ultimoInmuebles?.slug,
           imgInmueble: res.imgs[0],
         };
 
         await fetch(`${production}/correos/inmueble-zona`, {
-          method: "POST",
-          headers: { "Content-type": "application/json" },
+          method: 'POST',
+          headers: { 'Content-type': 'application/json' },
           body: JSON.stringify(body),
         });
       });
@@ -137,9 +135,9 @@ const AnadirImagenes = () => {
   };
 
   const inmuebleCreado = () =>
-    router.push(`/propiedades/${ultimoInmueble?.slug}`);
+    router.push(`/propiedades/${ultimoInmuebles?.slug}`);
 
-  const verMisInmuebles = () => router.push("/perfil/mis-propiedades");
+  const verMisInmuebles = () => router.push('/perfil/mis-propiedades');
 
   // const mostrarVideoUpload = () => setAgregarVideo(!agregarVideo);
 
@@ -156,7 +154,7 @@ const AnadirImagenes = () => {
                     className="my-4 pointer"
                     src="/images/content/agregafoto.png"
                     alt="red1a1"
-                    style={{ width: "70%" }}
+                    style={{ width: '70%' }}
                   />
                 </div>
               </div>
@@ -164,13 +162,13 @@ const AnadirImagenes = () => {
                 style={{ fontSize: 22, fontWeight: 700 }}
                 className="text-center"
               >
-                Máximo 20 imágenes. Haz seleccionado{" "}
-                <span style={{ color: pictures.length > 20 ? "red" : "black" }}>
+                Máximo 20 imágenes. Haz seleccionado{' '}
+                <span style={{ color: pictures.length > 20 ? 'red' : 'black' }}>
                   {pictures.length}
-                </span>{" "}
+                </span>{' '}
                 imágenes.
                 <br />
-                {pictures.length > 20 && "Selecciona menos imágenes por favor"}
+                {pictures.length > 20 && 'Selecciona menos imágenes por favor'}
               </div>
               <br />
               <div className="text-center">{thumbs}</div>
@@ -189,7 +187,7 @@ const AnadirImagenes = () => {
       >
         <Form.Group className="mb-3">
           <Form.Control
-            style={{ display: "none" }}
+            style={{ display: 'none' }}
             type="file"
             multiple
             accept="image/*"
